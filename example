@@ -1,7 +1,9 @@
 Django Transaction Locks:
 
 1. We use `select_for_update` on our queryset to tell the database to lock the object until the transaction is done.
-2. Locking a database in a row requires a database transaction. We use django decorator `transaction.atomic()` to scope the transaction.
+2. Locking a database in a row requires a database transaction. We use django decorator `transaction.atomic()` to
+   scope the transaction.
+
 An Example,
 
         @classmethod
